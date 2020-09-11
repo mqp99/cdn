@@ -13,43 +13,33 @@
 	</style>
 </head>
 <body>
-	<div class="container">
+	<div class="navbar navbar-dark">  <!-- navbar-size-sm -->
+		<div class="navbar-brand"><a href="#">MLib</a></div>
+		<div class="navbar-menu navbar-menu-lg text-nowrap">
+			<a class="menu-link active" href="#">Home</a>
+			<a class="menu-link" href="#">About</a>
+			<a class="menu-link" href="#">Contact</a>
+			<a class="menu-link" href="#">(navbar-dark)</a>
+			<div class="search">
+				<form>
+					<input type="text" class="form-input mr-1" placeholder="Search">
+					<button class="btn btn-outline-green">Search</button>
+				</form>
+			</div>
+		</div>
+		<div class="navbar-toggle">
+			<button class="btn btn-hamburger float-right">
+				<span class=""></span>
+			</button>
+		</div>
+	</div>
+	<!-- <div class="container">
 		<div class="row">
 			<div class="col-md-12">
 				<h1>Header</h1>
 			</div>
 			<div class="col-md-8">
-				<div>
-					<input type="text" class="form-input mb-1" placeholder="Enter name ?">
-				</div>
-				<div>
-					<button class="btn mb-1 btn-blue">Button</button>
-					<button class="btn mb-1 btn-red">Button</button>
-					<button class="btn mb-1 btn-yellow">Button</button>
-					<button class="btn mb-1 btn-orange">Button</button>
-					<button class="btn mb-1 btn-pink">Button</button>
-					<button class="btn mb-1 btn-green">Button</button>
-					<button class="btn mb-1 btn-dark">Button</button>
-					<button class="btn mb-1 btn-black">Button</button>
-				</div>
-				<div>
-					<button class="btn mb-1 btn-outline-blue">Button</button>
-					<button class="btn mb-1 btn-outline-red">Button</button>
-					<button class="btn mb-1 btn-outline-yellow">Button</button>
-					<button class="btn mb-1 btn-outline-orange">Button</button>
-					<button class="btn mb-1 btn-outline-pink">Button</button>
-					<button class="btn mb-1 btn-outline-green">Button</button>
-					<button class="btn mb-1 btn-outline-dark">Button</button>
-					<button class="btn mb-1 btn-outline-black">Button</button>
-				</div>
-				<div>
-					<button class="btn btn-effect mb-1 btn-blue">Effect</button>
-					<button class="btn btn-effect-2 mb-1 btn-green">Effect 2</button>
-					<button class="btn btn-effect-3 mb-1 btn-red">Effect 3</button>
-					<button class="btn btn-effect-4 mb-1 btn-yellow">Effect 4</button>
-					<button class="btn btn-effect-5 mb-1 btn-orange">Effect 5</button>
-					<button class="btn btn-effect-6 mb-1 btn-pink">Effect 6</button>
-				</div>
+				
 			</div>
 			<div class="col-md-4">
 				
@@ -58,6 +48,13 @@
 				<h1>Footer</h1>
 			</div>
 		</div>
-	</div>
+	</div> -->
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script>
+		$('.btn-hamburger').on('click', function() {
+			$(this).toggleClass('open');
+			$('.navbar-menu').toggleClass('open');
+		})
+	</script>
 </body>
 </html>
