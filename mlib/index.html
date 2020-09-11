@@ -15,7 +15,7 @@
 <body>
 	<div class="navbar navbar-dark">  <!-- navbar-size-sm -->
 		<div class="navbar-brand"><a href="#">BRAND</a></div>
-		<div class="navbar-menu navbar-menu-lg text-nowrap">
+		<div class="navbar-menu">
 			<a class="menu-link active" href="#">Home</a>
 			<a class="menu-link" href="#">About</a>
 			<a class="menu-link" href="#">Contact</a>
@@ -28,32 +28,57 @@
 			</div>
 		</div>
 		<div class="navbar-toggle">
-			<button class="btn btn-hamburger-1 float-right">
+			<button class="btn btn-hamburger-1 float-right" data-toggle='toggle-menu' data-fullheight='true'>
 				<span class=""></span>
 			</button>
 		</div>
 	</div>
-	<!-- <div class="container">
+	<div class="container">
 		<div class="row">
-			<div class="col-md-12">
+			<div class="col-md-12 py-3">
 				<h1>Header</h1>
 			</div>
 			<div class="col-md-8">
 				
+				<div>
+					<button class="btn btn-effect mb-1 btn-blue">Effect</button>
+					<button class="btn btn-effect-2 mb-1 btn-green">Effect 2</button>
+					<button class="btn btn-effect-3 mb-1 btn-red">Effect 3</button>
+					<button class="btn btn-effect-4 mb-1 btn-yellow">Effect 4</button>
+					<button class="btn btn-effect-5 mb-1 btn-orange">Effect 5</button>
+					<button class="btn btn-effect-6 mb-1 btn-pink">Effect 6</button>
+				</div>
+
 			</div>
 			<div class="col-md-4">
-				
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 			</div>
-			<div class="col-md-12">
+			<div class="col-md-12 py-3">
 				<h1>Footer</h1>
 			</div>
 		</div>
-	</div> -->
+	</div>
 	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 	<script>
-		$('.btn-hamburger-1').on('click', function() {
+		$(`[data-toggle='toggle-menu']`).on('click', function() {
+			_navMenu = $('.navbar-menu');
+			_fullHeightNavmenu = $(this).attr('data-fullheight');
+			if(_fullHeightNavmenu == 'true') {
+				_navMenu.toggleClass('fullheight')
+			}
 			$(this).toggleClass('open');
-			$('.navbar-menu').toggleClass('open');
+			_navMenu.toggleClass('open');
+		})
+		$('.btn-effect, .btn-effect-2, .btn-effect-3, .btn-effect-4, .btn-effect-5, .btn-effect-6').on('click', function() {
+			$(this).addClass('animation');
+			setTimeout(()=>{
+				$('button').removeClass('animation')
+			},500);
 		})
 	</script>
 </body>
