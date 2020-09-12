@@ -8,7 +8,7 @@ $(function() {
 	var lastScrollTop = 0;
 	var navHeight = $('.navbar').outerHeight();
 
-	$(window).on('scroll', function() {
+	$(window).on('scroll', function scrollNavbar() {
 		var scrollTop = $(document).scrollTop();
 		if(_navbar.data('showonscroll') == true) {
 			if( scrollTop < navHeight ) {
@@ -30,7 +30,7 @@ $(function() {
 		}
 	})
 
-	$(`[data-toggle='toggle-menu']`).on('click', function() {
+	$(`[data-toggle='toggle-menu']`).on('click', function toggleMenu() {
 		_fullHeightNavmenu = $(this).data('fullheight');
 		_body.toggleClass('hidden');
 		_navMenu.toggleClass('open');
@@ -41,7 +41,7 @@ $(function() {
 		}
 	})
 
-	$(`button[class*='effect']`).on('click', function() {
+	$(`button[class*='effect']`).on('click', function toggleEffect() {
 
 		$(this).addClass('animation');
 
@@ -50,7 +50,7 @@ $(function() {
 		},500);
 	})
 
-	$(`[data-ripple='true']`).on('click', function(e) {
+	$(`[data-ripple='true']`).on('click', function toggleRipple(e) {
 		let x = $(window).scrollLeft() - $(this).offset().left + e.clientX;
 		let y = $(window).scrollTop() - $(this).offset().top + e.clientY;
 
