@@ -52,12 +52,12 @@ $(function() {
 		let x = e.clientX - e.target.offsetLeft;
 		let y = e.clientY - e.target.offsetTop;
 
-		let ripples = $(this).append(`<span class='ripple' style='left: ${x}px; top: ${y}px;'></span>`);
+		let ripples = $(this).append(`<div class='ripple' style='left: ${x}px; top: ${y}px;'></div>`);
 
 		clearTimeout(times);
 
 		var times = setTimeout( () => {
-			$(this).find('span').remove();
+			$(this).find('div:first').remove();
 		}, 1000)
 	})
 })
