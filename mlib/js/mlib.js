@@ -17,6 +17,7 @@ $(function() {
 			}else if( scrollTop > lastScrollTop) {
 				_navbar.removeClass('navbar-sticky');
 				_navMenu.removeClass('open');
+				$(`[data-toggle='toggle-menu']`).removeClass('open');
 			}else{
 				_navbar.addClass('navbar-sticky');
 			}
@@ -34,7 +35,7 @@ $(function() {
 
 	$(`[data-toggle='toggle-menu']`).on('click', function toggleMenu() {
 		_fullHeightNavmenu = $(this).data('fullheight');
-		_body.toggleClass('hidden');
+		// _body.toggleClass('hidden'); disabled body scroll
 		_navMenu.toggleClass('open');
 		$(this).toggleClass('open');
 
