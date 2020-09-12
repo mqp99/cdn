@@ -38,6 +38,11 @@ $(function() {
 		$(this).toggleClass('open');
 	})
 
+	$('.navbar-menu li').on('click', function toggleActiveMenu() {
+		$('.navbar-menu li').removeClass('active');
+		$(this).toggleClass('active')
+	})
+
 	$(`[data-toggle='toggle-menu']`).on('click', function toggleMenu() {
 		_fullHeightNavmenu = $(this).data('fullheight');
 		// _body.toggleClass('hidden'); disabled body scroll
