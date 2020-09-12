@@ -79,54 +79,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-	<script>
-		var	_body = $('body');
-		var	_button = $('button');
-		var	_navbar = $('.navbar');
-		var	_navMenu = $('.navbar-menu');
-
-		var lastScrollTop = 0;
-		var navHeight = $('.navbar').outerHeight();
-
-		$(window).on('scroll', function() {
-			var scrollTop = $(document).scrollTop();
-			if(_navbar.data('showonscroll') == true) {
-				if( scrollTop < navHeight ) {
-					_navbar.removeClass('navbar-sticky');
-				}else if( scrollTop > lastScrollTop) {
-					_navbar.removeClass('navbar-sticky');
-					_navMenu.removeClass('open');
-				}else{
-					_navbar.addClass('navbar-sticky');
-				}
-				lastScrollTop = scrollTop;
-			}
-			if(_navbar.data('fixed') == true) {
-				if( scrollTop < navHeight ) {
-					_navbar.removeClass('navbar-fixed');
-				}else{
-					_navbar.addClass('navbar-fixed');
-				}
-			}
-		})
-
-		$(`[data-toggle='toggle-menu']`).on('click', function() {
-			_fullHeightNavmenu = $(this).data('fullheight');
-			_body.toggleClass('hidden');
-			_navMenu.toggleClass('open');
-			$(this).toggleClass('open');
-
-			if(_fullHeightNavmenu == true) {
-				_navMenu.toggleClass('fullheight')
-			}
-		})
-		$(`button[class*='effect']`).on('click', function() {
-			$(this).addClass('animation');
-			setTimeout(()=>{
-				_button.removeClass('animation')
-			},500);
-		})
-	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="js/mlib.js"></script>
 </body>
 </html>
