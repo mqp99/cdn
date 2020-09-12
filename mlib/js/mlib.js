@@ -42,14 +42,16 @@ $(function() {
 	})
 
 	$(`button[class*='effect']`).on('click', function() {
+
 		$(this).addClass('animation');
-		setTimeout(()=>{
-			_button.removeClass('animation')
+
+		setTimeout(()=>{ 
+			_button.removeClass('animation') 
 		},500);
 	})
 
 	$(`[data-ripple='true']`).on('click', function(e) {
-		let x = e.clientX - e.target.offsetLeft;
+		let x = $(window).scrollLeft() - $(this).offset().left + e.clientX;
 		let y = $(window).scrollTop() - $(this).offset().top + e.clientY;
 
 		let ripples = $(this).append(`<div class='ripple' style='left: ${x}px; top: ${y}px;'></div>`);
