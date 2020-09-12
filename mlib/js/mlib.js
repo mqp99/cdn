@@ -33,6 +33,11 @@ $(function() {
 		}
 	})
 
+	$('.menu-link-drop').on('click', function toggleMenuDrop() {
+		$(this).siblings().removeClass('open');
+		$(this).toggleClass('open');
+	})
+
 	$(`[data-toggle='toggle-menu']`).on('click', function toggleMenu() {
 		_fullHeightNavmenu = $(this).data('fullheight');
 		// _body.toggleClass('hidden'); disabled body scroll
