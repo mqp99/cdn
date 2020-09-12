@@ -33,7 +33,7 @@ $(function() {
 		}
 	})
 
-	$('.menu-link-drop').on('click', function toggleMenuDrop() {
+	$('.menu-drop').on('click', function toggleMenuDrop() {
 		$(this).siblings().removeClass('open');
 		$(this).toggleClass('open');
 	})

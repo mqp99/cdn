@@ -28,14 +28,14 @@
 				<li class="active"><a class="menu-link" href="#">Home</a></li>
 				<li><a class="menu-link" href="#documentation">Documentation</a></li>
 				<li><a class="menu-link" href="#testframework">Examples</a></li>
-				<li class="menu-link-drop"><a class="menu-link" href="#cdnlink">CDN</a>
-					<div>
+				<li class="menu-drop"><a class="menu-link" href="#opendropcdn">CDN</a>
+					<div class="wrapper-menu-drop">
 						<a class="menu-link" href="#cdnlink">Mlib CSS v0.0.1</a>
 						<a class="menu-link" href="#cdnlink">Mlib JS v0.0.1</a>
 					</div>
 				</li>
-				<li class="menu-link-drop"><a class="menu-link" href="#">Contact</a>
-					<div>
+				<li class="menu-drop"><a class="menu-link" href="#opendropcontact">Contact</a>
+					<div class="wrapper-menu-drop">
 						<a class="menu-link" href="https://fb.me/mqp99" target="_blank">Facebook</a>
 						<a class="menu-link" href="tel:+344780780">Zalo</a>
 					</div>
@@ -51,7 +51,7 @@
 	</div>
 	<div class="container">
 		<div class="row">
-			<div class="col-md-12 py-3 d-center fd-column height-4">
+			<div class="col-md-12 py-3 d-center fd-column" style="height: calc(100vh - 55px);">
 				<h1 class="text-center">First project with framework MLib</h1>
 				<p class="text-center">
 					Build project you quickly and ease with predefined classes and responsive all device with grid system by MLib CSS <br>
@@ -61,9 +61,9 @@
 					<a class="btn btn-outline-dark mr-1 text-underline-none" data-ripple='true' href='#download'>Download</a>
 				</div>
 			</div>
-			<div class="col-md-12 pb-3">
+			<div class="col-md-12 py-3" id="cdnlink">
 				<div class="row">
-					<div class="col-md-5 px-2" id="cdnlink">
+					<div class="col-md-5 px-2">
 						<h2 class="ml-1">Get CDN link</h2>
 						<p>
 							When you only need to include MLib’s compiled CSS or JS, you can use MLibCDN. <br>
@@ -86,9 +86,9 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-md-12 pb-3">
+			<div class="col-md-12 py-3" id="documentation">
 				<div class="row">
-					<div class="col-md-12 px-2" id="documentation">
+					<div class="col-md-12 px-2">
 						<h2 class="ml-1">Documentation</h2>
 						<p>
 							With the resources to help you read and understand the classes we define.<br>
@@ -98,9 +98,9 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-md-12 pb-3">
+			<div class="col-md-12 py-3" id="testframework">
 				<div class="row">
-					<div class="col-md-12 px-2" id="testframework">
+					<div class="col-md-12 px-2">
 						<h2 class="ml-1">Test framework</h2>
 						<p>
 							We provide you with a HTML/CSS/JS code editor that you can check before using MLib.<br>
