@@ -58,10 +58,8 @@ $(function() {
 
 		let ripples = $(this).append(`<div class='ripple' style='left: ${x}px; top: ${y}px;'></div>`);
 
-		clearTimeout(times);
-
-		var times = setTimeout( () => {
+		setTimeout( () => {
 			$(this).find('div:first').remove();
-		}, 1000)
+		}, 900)
 	})
 })
