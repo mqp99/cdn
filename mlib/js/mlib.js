@@ -50,7 +50,7 @@ $(function() {
 
 	$(`[data-ripple='true']`).on('click', function(e) {
 		let x = e.clientX - e.target.offsetLeft;
-		let y = e.clientY - e.target.offsetTop;
+		let y = $(window).scrollTop() - $(this).offset().top + e.clientY;
 
 		let ripples = $(this).append(`<div class='ripple' style='left: ${x}px; top: ${y}px;'></div>`);
 
