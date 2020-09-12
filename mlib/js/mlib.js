@@ -10,6 +10,7 @@ $(function() {
 
 	$(window).on('scroll', function scrollNavbar() {
 		var scrollTop = $(document).scrollTop();
+
 		if(_navbar.data('showonscroll') == true) {
 			if( scrollTop < navHeight ) {
 				_navbar.removeClass('navbar-sticky');
@@ -21,6 +22,7 @@ $(function() {
 			}
 			lastScrollTop = scrollTop;
 		}
+		
 		if(_navbar.data('fixed') == true) {
 			if( scrollTop < navHeight ) {
 				_navbar.removeClass('navbar-fixed');
