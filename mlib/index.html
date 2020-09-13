@@ -3,8 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>MLib</title>
-	<link rel="stylesheet" href="css/app.min.css">
+	<title>MLib | The library framework HTML CSS and JS</title>
+	<link rel="stylesheet" href="assets/v0.0.1/css/app.min.css">
 	<!-- <link rel="stylesheet" href="http://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.css"> -->
 	<style type="text/css">
 		p {
@@ -14,19 +14,20 @@
 			white-space: nowrap;
 		}
 	</style>
+
 </head>
 <body>
-	<div class="navbar" data-showonscroll='false' data-fixed='true'>  <!-- navbar-size-sm -->
+	<div class="navbar" data-showonscroll='false' data-fixed='true'>
 		<div class="container">
 			<div class="navbar-brand"><a href="#">MLib</a></div>
 			<div class="navbar-toggle">
 				<button class="btn btn-hamburger float-right" data-toggle='toggle-menu' data-fullheight='true'>
-					<span class=""></span>
+					<span></span>
 				</button>
 			</div>
 			<div class="navbar-menu">
-				<li class="active"><a class="menu-link" href="#">Home</a></li>
-				<li><a class="menu-link" href="#documentation">Documentation</a></li>
+				<li class="active"><a class="menu-link" href="index.html">Home</a></li>
+				<li><a class="menu-link" href="document/index.html">Documentation</a></li>
 				<li><a class="menu-link" href="#testframework">Examples</a></li>
 				<li class="menu-drop"><a class="menu-link" href="#opendropcdn">CDN</a>
 					<div class="wrapper-menu-drop">
@@ -41,7 +42,7 @@
 					</div>
 				</li>
 				<div class="search ml-auto">
-					<form class="form-inline float-right">
+					<form class="form-inline">
 						<input type="text" class="form-input mr-1" placeholder="Search">
 						<button class="btn btn-outline-green">Search</button>
 					</form>
@@ -61,61 +62,10 @@
 					<a class="btn btn-outline-dark mr-1 text-underline-none" data-ripple='true' href='#download'>Download</a>
 				</div>
 			</div>
-			<div class="col-md-12 py-3" id="cdnlink">
-				<div class="row">
-					<div class="col-md-5 px-2">
-						<h2 class="ml-1">Get CDN link</h2>
-						<p>
-							When you only need to include MLib’s compiled CSS or JS, you can use MLibCDN. <br>
-							See it in action with our simple starter template, or browse the examples to jumpstart your next project. <br>
-							<button class="btn btn-outline-blue mt-1" data-ripple='true'>View more</button>
-						</p>
-					</div>
-					<div class="col-md-7 px-3 mt-5" style="overflow-x: auto;">
-						<div class="pre-code" >
-							<span class="text-dark">&lt;!-- CSS only --&gt;</span> <br>
-							<span class="text-red">&lt;link</span> <span class="text-blue">rel=</span><span class="text-green">'stylesheet'</span> <span class="text-blue">href=</span><span class="text-green">'https://mqp99.github.io/cdn/mlib/css/app.min.css'</span> <span class="text-red">/&gt;</span><br><br>
-
-							<span class="text-dark">&lt;!-- Jquery, MLibJS --&gt;</span> <br>
-
-							<span class="text-red">&lt;script</span> <span class="text-blue">src=</span><span class="text-green">'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'</span><span class="text-red">&gt;&lt;/script&gt;</span><br>
-
-							<span class="text-red">&lt;script</span> <span class="text-blue">src=</span><span class="text-green">'https://mqp99.github.io/cdn/mlib/js/mlib.js'</span><span class="text-red">&gt;&lt;/script&gt;</span><br>
-
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-12 py-3" id="documentation">
-				<div class="row">
-					<div class="col-md-12 px-2">
-						<h2 class="ml-1">Documentation</h2>
-						<p>
-							With the resources to help you read and understand the classes we define.<br>
-							This document incorporates some examples to help you understand. <br>
-							<button class="btn btn-outline-red mt-1" data-ripple='true'>Read document</button>
-						</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-12 py-3" id="testframework">
-				<div class="row">
-					<div class="col-md-12 px-2">
-						<h2 class="ml-1">Test framework</h2>
-						<p>
-							We provide you with a HTML/CSS/JS code editor that you can check before using MLib.<br>
-							This document incorporates some examples to help you understand. <br>
-							<a href="https://mqp99.github.io/getmlib/livecode/" class="btn btn-outline-orange mt-1 text-underline-none" data-ripple='true' target="_blank">View Editor</a>
-						</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-12 py-3 text-center">
-				Copy Right @ Minh Phạm
-			</div>
 		</div>
 	</div>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<script src="js/mlib.js"></script>
+	<script src="assets/v0.0.1/js/app.js"></script>
+	<script src="assets/v0.0.1/js/mlib.js"></script>
 </body>
 </html>
