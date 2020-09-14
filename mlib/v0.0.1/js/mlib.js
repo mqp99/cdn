@@ -131,6 +131,7 @@ $(function () {
 		},
 		carouselConfig: function(config) {
 			return this.each(function(){
+				var carouselAnimation = config.carouselAnimation;
 				var carouselLoop = config.carouselLoop;
 				var carouselBoxshadow = config.carouselBoxshadow;
 				var carouselRadius = config.carouselRadius;
@@ -146,16 +147,20 @@ $(function () {
 				if(carouselResponsive) {
 					$('.carousel').addClass('carousel-responsive');
 				}
-				if(carouselInterval) {
+				if(carouselInterval || carouselAnimation) {
 					if( carouselLoop ) {
 						setInterval(function() {
 							countNumber = count++;
-							$('.carousel-check').removeClass('checked')
-							$(`.carousel-${countNumber + 1}`).addClass('checked');
+							$('.carousel-check').removeClass('selected')
+							$('.carousel-img').removeClass('selected')
+							$('.carousel-img').removeClass(carouselAnimation)
+							$(`.carousel-${countNumber + 1}`).addClass('selected');
+							$(`.carousel-img.carousel-${countNumber + 1}`).addClass(carouselAnimation);
 							if($('.carousel-img').length > countNumber ) {
 								$('.carousel-slider').css('transform',`translateX(-${countNumber}00%)`);
 							}else{
-								$(`.carousel-${1}`).addClass('checked');
+								$(`.carousel-img.carousel-${1}`).addClass(carouselAnimation);
+								$(`.carousel-${1}`).addClass('selected');
 								$('.carousel-slider').css('transform',`translateX(0%)`);
 								count = 1;
 							}
@@ -163,12 +168,16 @@ $(function () {
 					}else {
 						setInterval(function() {
 							countNumber = count++;
-							$('.carousel-check').removeClass('checked')
-							$(`.carousel-${countNumber + 1}`).addClass('checked');
+							$('.carousel-check').removeClass('selected')
+							$('.carousel-img').removeClass('selected')
+							$('.carousel-img').removeClass(carouselAnimation)
+							$(`.carousel-${countNumber + 1}`).addClass('selected');
+							$(`.carousel-img.carousel-${countNumber + 1}`).addClass('selected');
 							if($('.carousel-img').length > countNumber ) {
 								$('.carousel-slider').css('transform',`translateX(-${countNumber}00%)`);
 							}else{
-								$(`.carousel-${1}`).addClass('checked');
+								$(`.carousel-img.carousel-${1}`).addClass(carouselAnimation);
+								$(`.carousel-${1}`).addClass('selected');
 								$('.carousel-slider').css('transform',`translateX(0%)`);
 								countNumber = 0;
 							}
@@ -178,8 +187,11 @@ $(function () {
 				for(let i = 1; i <= $('.carousel-img').length; ++i) {
 					$(`.carousel-${i}`).on('click',function() {
 						count = i;
-						$('.carousel-check').removeClass('checked')
-						$(`.carousel-${i}`).addClass('checked');
+						$('.carousel-check').removeClass('selected')
+						$('.carousel-img').removeClass('selected')
+						$('.carousel-img').removeClass(carouselAnimation)
+						$(`.carousel-${i}`).addClass('selected');
+						$(`.carousel-img.carousel-${i}`).addClass(carouselAnimation);
 						$('.carousel-slider').css('transform',`translateX(-${i - 1}00%)`);
 					})
 				}

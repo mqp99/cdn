@@ -904,6 +904,24 @@ input:read-only {
   object-fit: cover;
   background: #ccc;
 }
+.carousel .carousel-slider .carousel-img.effect {
+  animation: effect 0.5s 1;
+}
+.carousel .carousel-slider .carousel-img.effect-2 {
+  animation: effect_2 0.5s 1;
+}
+.carousel .carousel-slider .carousel-img.effect-3 {
+  animation: effect_3 0.5s 1;
+}
+.carousel .carousel-slider .carousel-img.effect-4 {
+  animation: effect_4 0.5s 1;
+}
+.carousel .carousel-slider .carousel-img.effect-5 {
+  animation: effect_5 0.5s 1;
+}
+.carousel .carousel-slider .carousel-img.effect-6 {
+  animation: effect_6 0.5s 1;
+}
 .carousel .carousel-select {
   position: absolute;
   bottom: 10px;
@@ -922,7 +940,7 @@ input:read-only {
   list-style: none;
   background: #9c9c9c;
 }
-.carousel .carousel-select .carousel-box .carousel-check.checked {
+.carousel .carousel-select .carousel-box .carousel-check.selected {
   background: #fff;
 }
 

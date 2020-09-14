@@ -20,11 +20,12 @@ $(function () {
 		navbarShowOnScroll: false,
 	})
 	$('.carousel').carouselConfig({
-		carouselLoop: false,
+		carouselAnimation: 'effect-3',
+		carouselLoop: true,
 		carouselBoxshadow: true,
 		carouselRadius: true,
 		carouselResponsive: true,
-		carouselInterval: false,
-		carouselTimeInterval: 800,
+		carouselInterval: true,
+		carouselTimeInterval: 3000,
 	})
 })
