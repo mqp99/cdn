@@ -7,18 +7,22 @@ $(function () {
 	urlpathReplace = (urlHref === urlPage) ? urlPath : urlPath.replace(/[/]$/g, '')
 	// urlNow = protocol + '//' + hostName + pathName + '.html';
 
-	ROUTES = {
-		routes: {
-			path: '/document',
-			url: 'document.html',
-			title: 'Documentation'
-		}
-	}
-
-	checkFileExist()
-
 	function checkFileExist(url) {
 		// console.log(urlpathReplace);
 		// console.log(ROUTES.routes.path);
 	}
+
+	$('.navbar').navbarConfig({
+		navbarSize: 'default',
+		navbarBackground: 'default',
+		navbarFixed: false,
+		navbarFullHeight: true,
+		navbarShowOnScroll: false,
+	})
+	$('.carousel').carouselConfig({
+		carouselWidth: '100%',
+		carouselHeight: '20rem',
+		carouselInterval: true,
+		carouselTimeInterval: 1000
+	})
 })
