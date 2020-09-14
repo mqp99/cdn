@@ -144,19 +144,22 @@ $(function () {
 				if(carouselInterval) {
 					setInterval(function() {
 						countNumber = count++;
-						$(`#carousel--${countNumber + 1}`).prop('checked',true);
+						$('.carousel-check').removeClass('checked')
+						$(`.carousel-${countNumber + 1}`).addClass('checked');
 						if($('.carousel-img').length > countNumber ) {
 							$('.carousel-slider').css('transform',`translateX(-${countNumber}00%)`);
 						}else{
-							$(`#carousel--${1}`).prop('checked',true);
+							$(`.carousel-${1}`).addClass('checked');
 							$('.carousel-slider').css('transform',`translateX(0%)`);
 							count = 1;
 						}
 					}, (carouselTimeInterval != undefined) ? carouselTimeInterval : 3000);
 				}
 				for(let i = 1; i <= $('.carousel-img').length; ++i) {
-					$(`#carousel--${i}`).on('click',function() {
+					$(`.carousel-${i}`).on('click',function() {
 						count = i;
+						$('.carousel-check').removeClass('checked')
+						$(`.carousel-${i}`).addClass('checked');
 						$('.carousel-slider').css('transform',`translateX(-${i - 1}00%)`);
 					})
 				}

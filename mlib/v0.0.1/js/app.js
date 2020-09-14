@@ -23,6 +23,6 @@ $(function () {
 		carouselWidth: '100%',
 		carouselHeight: '20rem',
 		carouselInterval: true,
-		carouselTimeInterval: 1000
+		carouselTimeInterval: 3000,
 	})
 })

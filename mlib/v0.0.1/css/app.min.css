@@ -162,6 +162,11 @@ textarea {
   font-family: sans-serif;
 }
 
+input[type=checkbox],
+input[type=radio] {
+  border-radius: initial;
+}
+
 @keyframes ripple {
   0% {
     width: 0;
@@ -941,6 +946,21 @@ nav-size-lg,
   bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
+}
+.carousel .carousel-select .carousel-box {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.carousel .carousel-select .carousel-box .carousel-check {
+  width: 30px;
+  height: 4px;
+  margin: 5px;
+  list-style: none;
+  background: #9c9c9c;
+}
+.carousel .carousel-select .carousel-box .carousel-check.checked {
+  background: #fff;
 }
 
 /**
