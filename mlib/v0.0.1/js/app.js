@@ -21,7 +21,7 @@ $(function () {
 	})
 	$('.carousel').carouselConfig({
 		carouselAnimation: 'effect-3',
-		carouselLoop: true,
+		carouselLoop: false,
 		carouselBoxshadow: true,
 		carouselRadius: true,
 		carouselResponsive: true,

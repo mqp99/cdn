@@ -152,8 +152,7 @@ $(function () {
 						setInterval(function() {
 							countNumber = count++;
 							$('.carousel-check').removeClass('selected')
-							$('.carousel-img').removeClass('selected')
-							$('.carousel-img').removeClass(carouselAnimation)
+							$('.carousel-img').removeClass('selected').removeClass(carouselAnimation)
 							$(`.carousel-${countNumber + 1}`).addClass('selected');
 							$(`.carousel-img.carousel-${countNumber + 1}`).addClass(carouselAnimation);
 							if($('.carousel-img').length > countNumber ) {
@@ -169,8 +168,7 @@ $(function () {
 						setInterval(function() {
 							countNumber = count++;
 							$('.carousel-check').removeClass('selected')
-							$('.carousel-img').removeClass('selected')
-							$('.carousel-img').removeClass(carouselAnimation)
+							$('.carousel-img').removeClass('selected').removeClass(carouselAnimation)
 							$(`.carousel-${countNumber + 1}`).addClass('selected');
 							$(`.carousel-img.carousel-${countNumber + 1}`).addClass('selected');
 							if($('.carousel-img').length > countNumber ) {
@@ -188,8 +186,7 @@ $(function () {
 					$(`.carousel-${i}`).on('click',function() {
 						count = i;
 						$('.carousel-check').removeClass('selected')
-						$('.carousel-img').removeClass('selected')
-						$('.carousel-img').removeClass(carouselAnimation)
+						$('.carousel-img').removeClass('selected').removeClass(carouselAnimation)
 						$(`.carousel-${i}`).addClass('selected');
 						$(`.carousel-img.carousel-${i}`).addClass(carouselAnimation);
 						$('.carousel-slider').css('transform',`translateX(-${i - 1}00%)`);
