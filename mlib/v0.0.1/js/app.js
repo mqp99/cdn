@@ -20,8 +20,9 @@ $(function () {
 		navbarShowOnScroll: false,
 	})
 	$('.carousel').carouselConfig({
-		carouselWidth: '100%',
-		carouselHeight: '20rem',
+		carouselBoxshadow: true,
+		carouselRadius: true,
+		carouselResponsive: true,
 		carouselInterval: true,
 		carouselTimeInterval: 3000,
 	})

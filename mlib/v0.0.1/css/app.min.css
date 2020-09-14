@@ -691,8 +691,9 @@ input:read-only {
   border: 1px solid;
 }
 
-nav,
 .navbar {
+  position: relative;
+  z-index: 1;
   padding: 0 20px;
   width: 100%;
   height: 55px;
@@ -700,25 +701,21 @@ nav,
   background: #fff;
   align-items: center;
 }
-nav-fixed,
 .navbar-fixed {
   position: sticky;
   top: 0;
   z-index: 1;
   box-shadow: 1px 1px 0.5rem 2px #e8e8e8;
 }
-nav-sticky,
 .navbar-sticky {
   position: sticky;
   top: 0;
   z-index: 1;
 }
-nav .navbar-brand,
 .navbar .navbar-brand {
   height: 55px;
   line-height: 55px;
 }
-nav .navbar-brand a,
 .navbar .navbar-brand a {
   display: block;
   color: #262626;
@@ -727,14 +724,12 @@ nav .navbar-brand a,
   margin-right: 10px;
   text-decoration: none;
 }
-nav .navbar-menu,
 .navbar .navbar-menu {
   width: 100%;
   display: flex;
   font-size: 1rem;
   white-space: nowrap;
 }
-nav .navbar-menu li,
 .navbar .navbar-menu li {
   display: flex;
   align-items: center;
@@ -742,16 +737,13 @@ nav .navbar-menu li,
   margin: 0;
   list-style: none;
 }
-nav .navbar-menu li.menu-drop,
 .navbar .navbar-menu li.menu-drop {
   position: relative;
 }
-nav .navbar-menu li.menu-drop.open::after,
 .navbar .navbar-menu li.menu-drop.open::after {
   border-top: 0;
   border-bottom: 0.3em solid #888;
 }
-nav .navbar-menu li.menu-drop::after,
 .navbar .navbar-menu li.menu-drop::after {
   display: inline-block;
   vertical-align: 0.255em;
@@ -762,11 +754,9 @@ nav .navbar-menu li.menu-drop::after,
   border-right: 0.3em solid transparent;
   border-left: 0.3em solid transparent;
 }
-nav .navbar-menu li.menu-drop.open .wrapper-menu-drop,
 .navbar .navbar-menu li.menu-drop.open .wrapper-menu-drop {
   display: block;
 }
-nav .navbar-menu li.menu-drop .wrapper-menu-drop,
 .navbar .navbar-menu li.menu-drop .wrapper-menu-drop {
   display: none;
   position: absolute;
@@ -777,149 +767,115 @@ nav .navbar-menu li.menu-drop .wrapper-menu-drop,
   border-top: 1px solid #e8e8e8;
   border-bottom: 1px solid #e8e8e8;
 }
-nav .navbar-menu li.menu-drop .wrapper-menu-drop a,
 .navbar .navbar-menu li.menu-drop .wrapper-menu-drop a {
   width: 100%;
   padding: 10px;
   display: block;
 }
-nav .navbar-menu li.active .menu-link,
 .navbar .navbar-menu li.active .menu-link {
   color: #262626;
 }
-nav .navbar-menu li.active .menu-link.disabled,
 .navbar .navbar-menu li.active .menu-link.disabled {
   pointer-events: none;
   opacity: 0.5;
   background: transparent;
 }
-nav .navbar-menu li.active .wrapper-menu-drop .menu-link,
 .navbar .navbar-menu li.active .wrapper-menu-drop .menu-link {
   color: #999;
 }
-nav .navbar-menu li.active .wrapper-menu-drop .menu-link:hover,
 .navbar .navbar-menu li.active .wrapper-menu-drop .menu-link:hover {
   color: #262626;
 }
-nav .navbar-menu li .menu-link,
 .navbar .navbar-menu li .menu-link {
   padding: 5px;
   color: #888;
   border-radius: 0.25rem;
   text-decoration: none;
 }
-nav .navbar-menu li .menu-link:disabled, nav .navbar-menu li .menu-link.disabled,
-.navbar .navbar-menu li .menu-link:disabled,
-.navbar .navbar-menu li .menu-link.disabled {
+.navbar .navbar-menu li .menu-link:disabled, .navbar .navbar-menu li .menu-link.disabled {
   pointer-events: none;
   opacity: 0.5;
   background: transparent;
 }
-nav .navbar-menu li .menu-link:hover,
 .navbar .navbar-menu li .menu-link:hover {
   color: #262626;
 }
-nav .navbar-menu .search form,
 .navbar .navbar-menu .search form {
   width: 300px;
 }
-nav .navbar-toggle,
 .navbar .navbar-toggle {
   width: 100%;
   display: none;
 }
-nav-light,
 .navbar-light {
   background: #efefef;
 }
-nav-light .navbar-menu .menu-drop.open::after,
 .navbar-light .navbar-menu .menu-drop.open::after {
   border-top: 0;
   border-bottom: 0.3em solid #888;
 }
-nav-light .navbar-menu .menu-drop::after,
 .navbar-light .navbar-menu .menu-drop::after {
   border-top: 0.3em solid #888;
 }
-nav-light .navbar-menu .menu-drop div,
 .navbar-light .navbar-menu .menu-drop div {
   background: #e8e8e8 !important;
   border-top: 1px solid #ddd !important;
   border-bottom: 1px solid #ddd !important;
 }
-nav-dark,
 .navbar-dark {
   background: #343a40;
 }
-nav-dark .navbar-brand a,
 .navbar-dark .navbar-brand a {
   color: #fff !important;
 }
-nav-dark .navbar-menu .menu-drop::after,
 .navbar-dark .navbar-menu .menu-drop::after {
   border-top: 0.3em solid #b3b1b1;
 }
-nav-dark .navbar-menu .menu-drop::after.open::after,
 .navbar-dark .navbar-menu .menu-drop::after.open::after {
   border-top: 0;
   border-bottom: 0.3em solid #b3b1b1;
 }
-nav-dark .navbar-menu .menu-drop .wrapper-menu-drop,
 .navbar-dark .navbar-menu .menu-drop .wrapper-menu-drop {
   background: #343a40 !important;
   border-top: 1px solid rgba(65, 72, 78, 0.64) !important;
   border-bottom: 1px solid rgba(65, 72, 78, 0.64) !important;
 }
-nav-dark .navbar-menu .menu-link,
 .navbar-dark .navbar-menu .menu-link {
   color: #bbb !important;
 }
-nav-dark .navbar-menu .menu-link.active, nav-dark .navbar-menu .menu-link:hover,
-.navbar-dark .navbar-menu .menu-link.active,
-.navbar-dark .navbar-menu .menu-link:hover {
+.navbar-dark .navbar-menu .menu-link.active, .navbar-dark .navbar-menu .menu-link:hover {
   color: #fff !important;
 }
-nav-black,
 .navbar-black {
   background: #262626;
 }
-nav-black .navbar-brand a,
 .navbar-black .navbar-brand a {
   color: #fff !important;
 }
-nav-black .navbar-menu .menu-drop::after,
 .navbar-black .navbar-menu .menu-drop::after {
   border-top: 0.3em solid #b3b1b1;
 }
-nav-black .navbar-menu .menu-drop::after.open::after,
 .navbar-black .navbar-menu .menu-drop::after.open::after {
   border-top: 0;
   border-bottom: 0.3em solid #b3b1b1;
 }
-nav-black .navbar-menu .menu-drop .wrapper-menu-drop,
 .navbar-black .navbar-menu .menu-drop .wrapper-menu-drop {
   background: #262626 !important;
   border-top: 1px solid rgba(53, 55, 58, 0.64) !important;
   border-bottom: 1px solid rgba(53, 55, 58, 0.64) !important;
 }
-nav-black .navbar-menu .menu-link,
 .navbar-black .navbar-menu .menu-link {
   color: #bbb !important;
 }
-nav-black .navbar-menu .menu-link.active, nav-black .navbar-menu .menu-link:hover,
-.navbar-black .navbar-menu .menu-link.active,
-.navbar-black .navbar-menu .menu-link:hover {
+.navbar-black .navbar-menu .menu-link.active, .navbar-black .navbar-menu .menu-link:hover {
   color: #fff !important;
 }
-nav-size-sm,
 .navbar-size-sm {
   height: 50px;
 }
-nav-size-sm .navbar-brand,
 .navbar-size-sm .navbar-brand {
   line-height: 50px;
 }
-nav-size-lg,
 .navbar-size-lg {
   height: 60px;
 }
@@ -927,7 +883,14 @@ nav-size-lg,
 .carousel {
   position: relative;
   overflow: hidden;
+  width: 100%;
+  height: 70vh;
+}
+.carousel.carousel-boxshadow {
   box-shadow: 0 0 1rem 0rem rgba(0, 0, 0, 0.33);
+}
+.carousel.carousel-radius {
+  border-radius: 10px;
 }
 .carousel .carousel-slider {
   display: inline-flex;
@@ -2680,6 +2643,10 @@ nav-size-lg,
     padding: 0;
   }
 
+  .carousel-responsive {
+    height: 18rem !important;
+  }
+
   .row .col-sm-1 {
     flex: 0 0 100%;
     max-width: 100%;
@@ -2834,6 +2801,10 @@ nav-size-lg,
   .container,
 .container-max {
     width: 100%;
+  }
+
+  .carousel-responsive {
+    height: 55vh;
   }
 
   .row .col-lg-1 {

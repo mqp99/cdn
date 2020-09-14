@@ -131,15 +131,19 @@ $(function () {
 		},
 		carouselConfig: function(config) {
 			return this.each(function(){
-				var carouselWidth = config.carouselWidth;
-				var carouselHeight = config.carouselHeight;
+				var carouselBoxshadow = config.carouselBoxshadow;
+				var carouselRadius = config.carouselRadius;
+				var carouselResponsive = config.carouselResponsive;
 				var carouselInterval = config.carouselInterval;
 				var carouselTimeInterval = config.carouselTimeInterval;
-				if(carouselWidth || carouselHeight) {
-					$(this).css({
-						width: carouselWidth,
-						height: carouselHeight,
-					})
+				if(carouselBoxshadow) {
+					$('.carousel').addClass('carousel-boxshadow');
+				}
+				if(carouselRadius) {
+					$('.carousel').addClass('carousel-radius');
+				}
+				if(carouselResponsive) {
+					$('.carousel').addClass('carousel-responsive');
 				}
 				if(carouselInterval) {
 					setInterval(function() {
