@@ -131,6 +131,7 @@ $(function () {
 		},
 		carouselConfig: function(config) {
 			return this.each(function(){
+				var carouselLoop = config.carouselLoop;
 				var carouselBoxshadow = config.carouselBoxshadow;
 				var carouselRadius = config.carouselRadius;
 				var carouselResponsive = config.carouselResponsive;
@@ -146,18 +147,33 @@ $(function () {
 					$('.carousel').addClass('carousel-responsive');
 				}
 				if(carouselInterval) {
-					setInterval(function() {
-						countNumber = count++;
-						$('.carousel-check').removeClass('checked')
-						$(`.carousel-${countNumber + 1}`).addClass('checked');
-						if($('.carousel-img').length > countNumber ) {
-							$('.carousel-slider').css('transform',`translateX(-${countNumber}00%)`);
-						}else{
-							$(`.carousel-${1}`).addClass('checked');
-							$('.carousel-slider').css('transform',`translateX(0%)`);
-							count = 1;
-						}
-					}, (carouselTimeInterval != undefined) ? carouselTimeInterval : 3000);
+					if( carouselLoop ) {
+						setInterval(function() {
+							countNumber = count++;
+							$('.carousel-check').removeClass('checked')
+							$(`.carousel-${countNumber + 1}`).addClass('checked');
+							if($('.carousel-img').length > countNumber ) {
+								$('.carousel-slider').css('transform',`translateX(-${countNumber}00%)`);
+							}else{
+								$(`.carousel-${1}`).addClass('checked');
+								$('.carousel-slider').css('transform',`translateX(0%)`);
+								count = 1;
+							}
+						}, (carouselTimeInterval != undefined) ? carouselTimeInterval : 3000);
+					}else {
+						setInterval(function() {
+							countNumber = count++;
+							$('.carousel-check').removeClass('checked')
+							$(`.carousel-${countNumber + 1}`).addClass('checked');
+							if($('.carousel-img').length > countNumber ) {
+								$('.carousel-slider').css('transform',`translateX(-${countNumber}00%)`);
+							}else{
+								$(`.carousel-${1}`).addClass('checked');
+								$('.carousel-slider').css('transform',`translateX(0%)`);
+								countNumber = 0;
+							}
+						}, (carouselTimeInterval != undefined) ? carouselTimeInterval : 3000);
+					}
 				}
 				for(let i = 1; i <= $('.carousel-img').length; ++i) {
 					$(`.carousel-${i}`).on('click',function() {
