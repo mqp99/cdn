@@ -23,9 +23,9 @@ $(function () {
 		carouselAnimation: 'effect',
 		carouselLoop: true,
 		carouselBoxshadow: true,
-		carouselRadius: false,
+		carouselRadius: true,
 		carouselResponsive: true,
 		carouselInterval: true,
-		carouselTimeInterval: 5000,
+		carouselTimeInterval: 4000,
 	})
 })

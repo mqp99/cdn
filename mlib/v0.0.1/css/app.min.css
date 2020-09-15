@@ -901,6 +901,15 @@ input:read-only {
   height: 100%;
   transition: all 0.3s;
 }
+.carousel .carousel-slider .carousel-content {
+  width: 100%;
+}
+.carousel .carousel-slider .carousel-content .carousel-title {
+  position: absolute;
+  bottom: 40px;
+  width: 100%;
+  text-align: center;
+}
 .carousel .carousel-slider .carousel-img {
   min-width: 100%;
   height: 100%;

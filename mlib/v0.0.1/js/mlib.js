@@ -131,6 +131,7 @@ $(function () {
 		},
 		carouselConfig: function(config) {
 			return this.each(function(){
+				console.log($(this));
 				var carouselAnimation = config.carouselAnimation;
 				var carouselLoop = config.carouselLoop;
 				var carouselBoxshadow = config.carouselBoxshadow;
@@ -139,13 +140,13 @@ $(function () {
 				var carouselInterval = config.carouselInterval;
 				var carouselTimeInterval = config.carouselTimeInterval;
 				if(carouselBoxshadow) {
-					$('.carousel').addClass('carousel-boxshadow');
+					$(this).addClass('carousel-boxshadow');
 				}
 				if(carouselRadius) {
-					$('.carousel').addClass('carousel-radius');
+					$(this).addClass('carousel-radius');
 				}
 				if(carouselResponsive) {
-					$('.carousel').addClass('carousel-responsive');
+					$(this).addClass('carousel-responsive');
 				}
 				if(carouselInterval || carouselAnimation) {
 					if( carouselLoop ) {
@@ -153,7 +154,9 @@ $(function () {
 							countNumber = count++;
 							$('.carousel-check').removeClass('selected')
 							$('.carousel-img').removeClass('selected').removeClass(carouselAnimation)
+							$('.carousel-content').removeClass('selected').removeClass(carouselAnimation)
 							$(`.carousel-${countNumber + 1}`).addClass('selected');
+							$(`.carousel-content.carousel-${countNumber + 1}`).addClass(carouselAnimation);
 							$(`.carousel-img.carousel-${countNumber + 1}`).addClass(carouselAnimation);
 							if($('.carousel-img').length > countNumber ) {
 								$('.carousel-slider').css('transform',`translateX(-${countNumber}00%)`);
@@ -168,8 +171,10 @@ $(function () {
 						setInterval(function() {
 							countNumber = count++;
 							$('.carousel-check').removeClass('selected')
+							$('.carousel-content').removeClass('selected').removeClass(carouselAnimation)
 							$('.carousel-img').removeClass('selected').removeClass(carouselAnimation)
 							$(`.carousel-${countNumber + 1}`).addClass('selected');
+							$(`.carousel-content.carousel-${countNumber + 1}`).addClass(carouselAnimation);
 							$(`.carousel-img.carousel-${countNumber + 1}`).addClass(carouselAnimation);
 							if($('.carousel-img').length > countNumber ) {
 								$('.carousel-slider').css('transform',`translateX(-${countNumber}00%)`);
@@ -187,8 +192,10 @@ $(function () {
 						count = i;
 						$('.carousel-check').removeClass('selected')
 						$('.carousel-img').removeClass('selected').removeClass(carouselAnimation)
+						$('.carousel-content').removeClass('selected').removeClass(carouselAnimation)
 						$(`.carousel-${i}`).addClass('selected');
 						$(`.carousel-img.carousel-${i}`).addClass(carouselAnimation);
+						$(`.carousel-content.carousel-${i}`).addClass(carouselAnimation);
 						$('.carousel-slider').css('transform',`translateX(-${i - 1}00%)`);
 					})
 				}
