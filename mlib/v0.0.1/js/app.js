@@ -14,18 +14,18 @@ $(function () {
 
 	$('.navbar').navbarConfig({
 		navbarSize: 'default',
-		navbarBackground: 'default',
+		navbarBackground: 'dark',
 		navbarFixed: false,
 		navbarFullHeight: true,
 		navbarShowOnScroll: false,
 	})
 	$('.carousel').carouselConfig({
-		carouselAnimation: 'effect-3',
-		carouselLoop: false,
+		carouselAnimation: 'effect',
+		carouselLoop: true,
 		carouselBoxshadow: true,
-		carouselRadius: true,
+		carouselRadius: false,
 		carouselResponsive: true,
 		carouselInterval: true,
-		carouselTimeInterval: 3000,
+		carouselTimeInterval: 5000,
 	})
 })

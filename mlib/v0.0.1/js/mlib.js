@@ -170,7 +170,7 @@ $(function () {
 							$('.carousel-check').removeClass('selected')
 							$('.carousel-img').removeClass('selected').removeClass(carouselAnimation)
 							$(`.carousel-${countNumber + 1}`).addClass('selected');
-							$(`.carousel-img.carousel-${countNumber + 1}`).addClass('selected');
+							$(`.carousel-img.carousel-${countNumber + 1}`).addClass(carouselAnimation);
 							if($('.carousel-img').length > countNumber ) {
 								$('.carousel-slider').css('transform',`translateX(-${countNumber}00%)`);
 							}else{
