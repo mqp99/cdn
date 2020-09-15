@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>MLib | The library framework HTML CSS and JS</title>
+	<link rel="stylesheet" href="v0.0.1/css/app.min.css">
+	<!-- <link rel="stylesheet" href="http://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.css"> -->
+</head>
+<body>
+	<div class="app">
+		<div class="navbar">
+			<div class="container">
+				<div class="navbar-brand"><a href="#">MLib</a></div>
+				<div class="navbar-toggle">
+					<button class="btn btn-hamburger float-right" data-toggle='toggle-menu'>
+						<span></span>
+					</button>
+				</div>
+				<div class="navbar-menu">
+					<li class="active">
+						<a class="menu-link" href="/">Home</a>
+					</li>
+					<li>
+						<a class="menu-link" href="#documentation">Documentation</a>
+					</li>
+					<li>
+						<a class="menu-link" href="#examples">Examples</a>
+					</li>
+					<li class="menu-drop">
+						<a class="menu-link" href="#cdn">CDN</a>
+						<div class="wrapper-menu-drop">
+							<a class="menu-link" href="#cdncss">Mlib CSS v0.0.1</a>
+							<a class="menu-link" href="#cdnjs">Mlib JS v0.0.1</a>
+						</div>
+					</li>
+					<li class="menu-drop">
+						<a class="menu-link" href="#opendropcontact">Contact</a>
+						<div class="wrapper-menu-drop">
+							<a class="menu-link" href="https://fb.me/mqp99" target="_blank">Facebook</a>
+							<a class="menu-link" href="tel:+344780780">Zalo</a>
+						</div>
+					</li>
+					<div class="search ml-auto">
+						<form class="form-inline">
+							<input type="text" class="form-input mr-1" placeholder="Search">
+							<button class="btn btn-outline-green">Search</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<!-- <div class="col-md-12 py-2" style="position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%); width: 100%; min-width: 300px;">
+					<h1 class="text-center">First project with framework MLib</h1>
+					<p class="text-center">
+						Build project you quickly and ease with predefined classes and responsive all device with grid system by MLib CSS <br>
+					</p>
+					<div class="d-center">
+						<a class="btn btn-red mt-1 mr-1 text-underline-none" data-ripple='true' href='#cdnlink'>Get started</a>
+						<a class="btn btn-outline-dark mt-1 mr-1 text-underline-none" data-ripple='true' href='#download'>Download</a>
+					</div>
+				</div> -->
+				<div class="col-md-12 p-2">
+					<div class="carousel">
+						<div class="carousel-slider">
+							<div class="carousel-container carousel-1">
+							   <img src="imgs/img-1.jpg" alt="" class="carousel-img" />
+							</div>
+							<div class="carousel-container carousel-2">
+							   <img src="imgs/img-2.jpg" alt="" class="carousel-img" />
+							</div>
+							<div class="carousel-container carousel-3">
+							   <img src="imgs/img-3.jpg" alt="" class="carousel-img" />
+							</div>
+							<div class="carousel-container carousel-4">
+							   <img src="imgs/img-4.jpg" alt="" class="carousel-img" />
+							</div>
+							<div class="carousel-container carousel-5">
+							   <img src="imgs/img-5.jpg" alt="" class="carousel-img" />
+							</div>
+							<div class="carousel-container carousel-6">
+							   <img src="imgs/img-6.jpg" alt="" class="carousel-img" />
+							</div>
+						</div>
+						<div class="carousel-select">
+							<ul class="carousel-box">
+								<li class="carousel-check carousel-1 selected"></li>
+								<li class="carousel-check carousel-2"></li>
+								<li class="carousel-check carousel-3"></li>
+								<li class="carousel-check carousel-4"></li>
+								<li class="carousel-check carousel-5"></li>
+								<li class="carousel-check carousel-6"></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="v0.0.1/js/mlib.min.js" class="script"></script>
+	<script src="v0.0.1/js/app.js" class="script"></script>
+	<script>
+
+		
+		// setInterval(function() {
+		// 	countNumber = count++;
+		// 	$(`.carousel--${countNumber + 1}`).prop('checked',true);
+		// 	if($('.carousel-img').length > countNumber ) {
+		// 		$('.carousel-slider').css('transform',`translateX(-${countNumber}00%)`);
+		// 	}else{
+		// 		$(`.carousel--${1}`).prop('checked',true);
+		// 		$('.carousel-slider').css('transform',`translateX(0%)`);
+		// 		count = 1;
+		// 	}
+		// }, 3000);
+	</script>
+</body>
+</html>
