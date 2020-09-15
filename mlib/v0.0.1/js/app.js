@@ -11,7 +11,6 @@ $(function () {
 		// console.log(urlpathReplace);
 		// console.log(ROUTES.routes.path);
 	}
-
 	$('.navbar').navbarConfig({
 		navbarSize: 'default',
 		navbarBackground: 'default',
@@ -27,5 +26,8 @@ $(function () {
 		carouselResponsive: true,
 		carouselInterval: true,
 		carouselTimeInterval: 3500,
+	})
+	$('a').on('click',function (){
+		
 	})
 })
