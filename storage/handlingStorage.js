@@ -95,15 +95,26 @@ class Storage {
 							delete jsonStorage[index];
 							/** Thông báo thành công */
 							(this.cldisabled == true) ? console.log(`Storage key '${key}' has been delete '${index}'!`) : '';
+							/** Cập nhật lại storage */
+							return this.setItemJSON(key, jsonStorage);
+						}else{
+							return (this.cldisabled == true) ? console.error(`Storage key '${key}' not isset '${index}'!`) : '';
 						}
 					}
 				}
-				/** Cập nhật lại storage */
-				this.setItemJSON(key, jsonStorage);
 			/** Nếu `value` loại thường */
-			}else{
-				/** Xóa bỏ key */
-				localStorage.removeItem(key);
+			}else if (this.regexObj.test(this.getItem(key)) === false && index === undefined) {
+				var confirmRemove = confirm(`Storage key '${key}' no keys left, press 'ok' will remove key '${key}'!`);
+				if(confirmRemove) {
+					localStorage.removeItem(key);
+				}
+			}
+			/** Nếu `value` json null */
+			if(this.getItem(key) === '{}') {
+				var confirmRemove = confirm(`Storage key '${key}' no keys left, press 'ok' will remove key '${key}'!`);
+				if(confirmRemove) {
+					localStorage.removeItem(key);
+				}
 			}
 		}
 	}
@@ -123,3 +134,5 @@ class Storage {
 		return length;
 	}
 }
+
+export default Storage;
